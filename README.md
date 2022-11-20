@@ -3,4 +3,6 @@ Repository that will contain the default files and folders for the future projec
 
 ```bash
   ./git-project.sh <project-name>
+
+  mv project/<project-name>/ ../
 ```

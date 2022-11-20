@@ -19,7 +19,6 @@ addGitSubModules() {
   addGitSubModule "terraform/modules/" "terraform-proxmox-ubuntu-22-04-module" "proxmox-ubuntu-22-04"
 
   git submodule init
-  # git pull --recurse-submodules
 }
 
 createFolderFromSkeleton() {

@@ -2,11 +2,20 @@
 set -e # Abort if there is an issue with any build.
 
 project_folder="project"
+github_url="https://github.com/lsampaioweb"
+
+gitCommitAndPush() {
+  git add .
+  git commit -m "first commit"
+  git branch -M main
+  git remote add origin "$github_url/$1.git"
+  git push -u origin main
+}
 
 addGitSubModule() {
   cd "$1"
   echo "Adding submodule $2"
-  git submodule add https://github.com/lsampaioweb/$2.git "$3"
+  git submodule add "$github_url/$2.git" "$3"
   cd -
 }
 
@@ -23,6 +32,7 @@ addGitSubModules() {
 
 createFolderFromSkeleton() {
   mkdir -p "$project_folder"
+
   cp -a ".skeleton/." "$project_folder/$1"
 }
 
@@ -32,6 +42,8 @@ createProject() {
   createFolderFromSkeleton "$1"
 
   addGitSubModules "$1"
+
+  gitCommitAndPush "$1"
 }
 
 userHasProvidedArguments () {

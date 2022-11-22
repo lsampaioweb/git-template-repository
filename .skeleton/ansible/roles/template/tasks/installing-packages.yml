@@ -9,4 +9,3 @@
   vars:
     packages:
       - {name: "curl"} # Transfer a URL.
-

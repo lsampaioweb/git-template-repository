@@ -24,27 +24,18 @@ Run these commands on the Proxmox node (just once and on any node):
 Run these commands on the computer that is running Terraform:
 
 ```bash
-  01 - Add the API token of the user to the ~/.bashrc file.
-    nano ~/.bashrc
-    # Function to unlock gnome keyring for headless logins.
-    function unlock-keyring ()
-    {
-      read -rsp "Type your password: " pass
-      export $(echo -n "$pass" | gnome-keyring-daemon --replace --unlock --daemonize)
-      unset pass
-
-      export PM_API_TOKEN_SECRET=$(secret-tool lookup token "proxmox-terraform-token")
-    }
-
-  02 - Run the unlock-keyring command on the terminal to unlock the secret - manager.
-    source ~/.bashrc  
-    unlock-keyring
-
-  03 - Save the password in the secret manager.
+  01 - Save the password in the secret manager.
     secret-tool store --label="proxmox-terraform-password" password proxmox-terraform-password
 
-  04 - Save the API token in the secret manager.
+  02 - Save the API token in the secret manager.
     secret-tool store --label="proxmox-terraform-token" token proxmox-terraform-token
+
+  03 - Add the API token of the user to the ~/.bashrc file.
+    nano ~/.bashrc
+    export PM_API_TOKEN_SECRET=$(secret-tool lookup token "proxmox-terraform-token")
+
+  04 - Run the source command on the terminal.
+    source ~/.bashrc  
 
   05 - Run Terraform to create the VM.
     cd terraform/{stagging or production}

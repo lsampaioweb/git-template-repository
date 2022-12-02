@@ -6,7 +6,7 @@ github_url="https://github.com/lsampaioweb"
 
 gitCommitAndPush() {
   git add .
-  git commit -m "first commit"
+  git commit -m "First commit"
   git branch -M main
   git remote add origin "$github_url/$1.git"
   git push -u origin main

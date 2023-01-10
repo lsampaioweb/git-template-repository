@@ -25,9 +25,6 @@ addGitSubModules() {
   git init
   addGitSubModule "ansible/roles/" "ansible-common-tasks" "common"
   addGitSubModule "packer/" "packer-proxmox-ubuntu-22-04-clone" "clone"
-  addGitSubModule "terraform/modules/" "terraform-proxmox-ubuntu-22-04-module" "proxmox-ubuntu-22-04"
-  addGitSubModule "terraform/modules/" "terraform-random-target-node" "random-target-node"
-
   git submodule init
 }
 

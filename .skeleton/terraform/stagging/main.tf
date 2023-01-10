@@ -1,11 +1,11 @@
 module "random-target-node" {
-  source = "../modules/random-target-node"
+  source = "github.com/lsampaioweb/terraform-random-target-node.git?ref=v1.0"
 
   for_each = var.vm_instance
 }
 
 module "proxmox-vm" {
-  source = "../modules/proxmox-vm"
+  source = "github.com/lsampaioweb/terraform-proxmox-vm-module.git?ref=v1.0"
 
   for_each = var.vm_instance
 
@@ -16,7 +16,7 @@ module "proxmox-vm" {
   vcpus       = each.value.vcpus
 
   description = "."
-  pool        = "Stagging"
+  pool        = "Staging"
 }
 
 resource "local_file" "ansible_hosts" {

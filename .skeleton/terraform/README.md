@@ -38,7 +38,7 @@ Run these commands on the computer that is running Terraform:
     source ~/.bashrc  
 
   05 - Run Terraform to create the VM.
-    cd terraform/{stagging or production}
+    cd terraform/{staging or production}
     terraform init
 
     terraform plan

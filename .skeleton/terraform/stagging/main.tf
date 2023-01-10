@@ -5,7 +5,7 @@ module "random-target-node" {
 }
 
 module "proxmox-vm" {
-  source = "github.com/lsampaioweb/terraform-proxmox-vm-module.git?ref=v1.0"
+  source = "github.com/lsampaioweb/terraform-proxmox-vm-module.git?ref=v1.1"
 
   for_each = var.vm_instance
 

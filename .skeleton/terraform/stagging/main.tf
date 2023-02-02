@@ -1,5 +1,6 @@
 module "random_target_node" {
-  source = "github.com/lsampaioweb/terraform-random-target-node.git?ref=v1.0"
+  source  = "lsampaioweb/target-node/random"
+  version = "1.0.0"
 
   for_each = var.vm_instance
 }

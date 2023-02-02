@@ -1,3 +1,3 @@
 output "proxmox-virtual-machine" {
-  value = module.proxmox-vm
+  value = module.proxmox_vm
 }

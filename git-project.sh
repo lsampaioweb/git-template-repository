@@ -24,7 +24,7 @@ addGitSubModules() {
 
   git init
   addGitSubModule "ansible/roles/" "ansible-common-tasks" "common"
-  addGitSubModule "packer/" "packer-proxmox-ubuntu-22-04-clone" "clone"
+  # addGitSubModule "packer/" "packer-proxmox-ubuntu-22-04-clone" "clone"
   git submodule init
 }
 
@@ -52,5 +52,5 @@ userHasProvidedArguments () {
 if (userHasProvidedArguments $*) ; then
   createProject "$1"  
 else
-  echo "You have to inform the name of the project."
+  echo "You have to inform the name of the project. e.g.: ./git-project.sh <project-name>"
 fi

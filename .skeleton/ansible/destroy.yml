@@ -4,4 +4,4 @@
   become: true
 
   roles:
-    - "provision"
+    - "destroy"

@@ -5,4 +5,7 @@
     update_cache: true
     upgrade: "safe"
     packages:
-      - {name: "curl"} # Transfer a URL.
+      - {name: "keepalived"} # To enable failover between two or more servers.
+
+- name: "Setting up the Keepalived package"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/keepalived.yml"

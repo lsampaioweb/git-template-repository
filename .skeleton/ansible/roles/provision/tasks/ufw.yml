@@ -1,0 +1,6 @@
+---
+- name: "Adding UFW rules"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/ufw.yml"
+  vars:
+    rules:
+      - {rule: "allow", name: "Bind9", comment: "Allow DNS for All"}

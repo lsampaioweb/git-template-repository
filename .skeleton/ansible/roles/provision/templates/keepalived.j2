@@ -1,0 +1,22 @@
+global_defs {
+  max_auto_priority 99
+}
+
+vrrp_instance VI_loadbalancer {
+  state {{ state | default('MASTER') | upper }}
+  interface {{ interface | default('eth0') }}
+  virtual_router_id {{ virtual_router_id | default(1) }}
+  priority {{ priority | default(250) }}
+  advert_int {{ advert_int | default(2) }}
+  authentication {
+    auth_type {{ auth_type | default('PASS') }}
+    auth_pass {{ ansible_password | truncate(8, true, '') | upper }}
+  }
+  unicast_src_ip {{ unicast_src_ip }}
+  unicast_peer {
+    {{ unicast_peer_ip | replace(',', '\n    ') }}
+  }
+  virtual_ipaddress {
+    {{ virtual_ipaddress | default('X.X.X.X/28') }}
+  }
+}

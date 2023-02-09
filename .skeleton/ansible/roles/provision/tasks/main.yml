@@ -4,3 +4,9 @@
 
 - name: "Installing required packages"
   ansible.builtin.import_tasks: "installing-packages.yml"
+
+- name: "Setting up the load balancer"
+  ansible.builtin.import_tasks: "setup-app.yml"
+
+- name: "Enabling and setting up UFW"
+  ansible.builtin.import_tasks: "ufw.yml"

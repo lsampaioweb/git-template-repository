@@ -51,7 +51,7 @@ variable "vm_instance" {
     vga = optional(object({
       type   = optional(string)
       memory = optional(number)
-    }))
+    }), {})
 
     ## CPU
     cpu     = optional(string)

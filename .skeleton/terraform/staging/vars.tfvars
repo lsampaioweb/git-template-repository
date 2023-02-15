@@ -7,7 +7,7 @@ vm_instance = {
     startup = "order=2010"
     networks = {
       "01" = {
-        tag    = 5
+        tag = 5
       }
     }
 
@@ -20,7 +20,7 @@ vm_instance = {
     startup = "order=2011"
     networks = {
       "01" = {
-        tag    = 5
+        tag = 5
       }
     }
 

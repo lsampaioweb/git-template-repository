@@ -24,6 +24,7 @@ addGitSubModules() {
 
   git init
   addGitSubModule "ansible/roles/" "ansible-common-tasks" "common"
+  addGitSubModule "ansible/roles/" "ansible-kvm-cloud-init" "kvm_setup"
   # addGitSubModule "packer/" "packer-proxmox-ubuntu-22-04-clone" "clone"
   git submodule init
 }

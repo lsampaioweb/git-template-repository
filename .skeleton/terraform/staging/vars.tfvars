@@ -1,7 +1,7 @@
 project     = "XXX"
 environment = "Staging"
 
-vm_instance = {
+vm_instances = {
   "01" = {
     # VM
     startup = "order=2010"

@@ -6,7 +6,7 @@ github_url="https://github.com/lsampaioweb"
 
 gitCommitAndPush() {
   git add .
-  git commit -m "First commit" --author "ZaraMalu Bot<lsampaioweb+zaramalubot@gmail.com>"
+  git commit -m "First commit" --author "Bot<lsampaioweb+bot@gmail.com>"
   git branch -M main
   git remote add origin "$github_url/$1.git"
   git push -u origin main

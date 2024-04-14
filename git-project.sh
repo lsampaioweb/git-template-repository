@@ -6,7 +6,7 @@ github_url="https://github.com/lsampaioweb"
 
 gitCommitAndPush() {
   git add .
-  git commit -m "First commit"
+  git commit -m "First commit" --author "ZaraMalu Bot<lsampaioweb+zaramalubot@gmail.com>"
   git branch -M main
   git remote add origin "$github_url/$1.git"
   git push -u origin main
@@ -51,7 +51,7 @@ userHasProvidedArguments () {
 }
 
 if (userHasProvidedArguments $*) ; then
-  createProject "$1"  
+  createProject "$1"
 else
   echo "You have to inform the name of the project. e.g.: ./git-project.sh <project-name>"
 fi

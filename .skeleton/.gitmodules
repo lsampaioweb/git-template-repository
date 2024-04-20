@@ -1,6 +1,0 @@
-[submodule "ansible/roles/common"]
-	path = ansible/roles/common
-	url = https://github.com/lsampaioweb/ansible-common-tasks.git
-# [submodule "packer/clone"]
-# 	path = packer/clone
-# 	url = https://github.com/lsampaioweb/packer-proxmox-ubuntu-22-04-clone.git

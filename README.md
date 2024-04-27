@@ -8,3 +8,8 @@ Repository that will contain the default files and folders for the future projec
 ```bash
 ./git-project.sh <project-name>
 ```
+
+#
+## Created by:
+
+1. Luciano Sampaio.

@@ -10,6 +10,6 @@
 
 ## 4. Recreate the machine-id file so the new VM can get a new IP.
 
-# Created by: 
+### Created by:
 
 1. Luciano Sampaio.

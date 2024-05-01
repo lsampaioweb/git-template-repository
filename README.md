@@ -10,6 +10,6 @@ Repository that will contain the default files and folders for the future projec
 ```
 
 #
-## Created by:
+### Created by:
 
 1. Luciano Sampaio.

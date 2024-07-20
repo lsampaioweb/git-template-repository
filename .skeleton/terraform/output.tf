@@ -4,5 +4,5 @@ output "virtual_machines" {
 
 output "app_url" {
   description = "URL of the application"
-  value       = ["https://XXX.homelab", "https://XXX-01.homelab", "https://XXX-02.homelab"]
+  value       = ["https://XXX.lan.homelab", "https://XXX-01.lan.homelab", "https://XXX-02.lan.homelab"]
 }

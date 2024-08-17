@@ -30,7 +30,7 @@ variable "vm_instances" {
     bios        = optional(string)
     onboot      = optional(bool)
     startup     = optional(string)
-    oncreate    = optional(bool)
+    vm_state    = optional(string)
     pool        = optional(string)
 
     ## Clone

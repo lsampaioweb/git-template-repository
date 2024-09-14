@@ -19,7 +19,7 @@
   loop: "{{ certificates }}"
 
 - name: "Creating and starting services (docker-compose up)"
-  community.docker.docker_compose:
+  community.docker.docker_compose_v2:
     project_name: "loadbalancer"
     project_src: "{{ docker_path }}"
     state: "present"

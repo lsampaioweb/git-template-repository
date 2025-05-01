@@ -29,7 +29,7 @@ addGitSubModules() {
   addGitSubModule "ansible/roles/" "ansible-kvm-cloud-init" "kvm_setup"
 
   # Packer.
-  addGitSubModule "packer/" "packer-proxmox-ubuntu-22-04-clone" "clone"
+  addGitSubModule "packer/" "packer-proxmox-ubuntu-clone" "clone"
   git submodule init
 }
 
